@@ -69,7 +69,7 @@ Toolbar toolbar;
 	private boolean					mNeedShowFragment = false;
 	private AlertDialog 			callDialogBuilder = null;
 	private BroadcastReceiver 		mRegistrationBroadcastReceiver = null;
-    
+
 
  
  

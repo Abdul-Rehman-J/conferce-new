@@ -1,5 +1,5 @@
 <resources>
-
+    <string name="facebook_app_id">1727815560784339</string>
 	<string name="app_name">Conference</string>
 	<string name="hello_world">Hello world!</string>
 	<string name="action_settings">Settings</string>
@@ -13,6 +13,7 @@
 	<string name="edittext2">Password</string>
 	<string name="createbutton">Create Account</string>
 	<string name="Login">Login</string>
+	<string name="name">Confernce</string>
 	<string name="etusername">Full Name</string>
 	<string name="etpassword">Password</string>
 	<string name="headingtextview">Conference</string>

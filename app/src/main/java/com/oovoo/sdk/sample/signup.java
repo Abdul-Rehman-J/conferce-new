@@ -15,11 +15,6 @@ Toolbar toolbar;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
-
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar); // Attaching the layout to the toolbar object
-        setSupportActionBar(toolbar);
 
         Button button= (Button) findViewById(R.id.btn_signup);
         button.setOnClickListener(new View.OnClickListener() {
