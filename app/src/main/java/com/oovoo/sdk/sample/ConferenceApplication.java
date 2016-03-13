@@ -3,6 +3,7 @@ package com.oovoo.sdk.sample;
 import android.app.Application;
 
 import com.parse.Parse;
+import com.parse.ParseUser;
 
 /**
  * Created by TOSHIBA on 13.2.2016. Şubat
@@ -17,5 +18,6 @@ public class ConferenceApplication extends Application {
         super.onCreate();
 
         Parse.initialize(this, PARSE_APP_ID, PARSE_CLI_ID);
+        ParseUser.enableRevocableSessionInBackground();
     }
 }
