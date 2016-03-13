@@ -65,7 +65,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+                    android:src="@drawable/an_im_vc_place_holder" />
 
                 <ImageView
                     android:id="@+id/imageView"

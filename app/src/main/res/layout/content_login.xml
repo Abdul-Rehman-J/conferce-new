@@ -87,7 +87,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
@@ -99,7 +99,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/password"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:ems="25"
@@ -112,12 +112,23 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Sign In"
+            android:text="Log In"
             android:textSize="20sp"
             android:textColor="#ffffff"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
-            android:id="@+id/btn_login"
+            android:id="@+id/login"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Sign Up"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_shape"
+            android:id="@+id/signup"
             android:layout_gravity="center_horizontal" />
         <View
             android:layout_marginTop="20dp"
@@ -126,62 +137,6 @@
             android:layout_height="2dp"
             android:background="@android:color/darker_gray"/>
 
-        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/fragment"
-            android:name="com.oovoo.sdk.sample.MainFragment"
-            tools:layout="@layout/fragment_main"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
-
-        <com.twitter.sdk.android.core.identity.TwitterLoginButton
-            android:id="@+id/twitter_button"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/g"
-            android:clickable="true"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:layout_marginBottom="5dp"
-        android:weightSum="2">
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Forgot Password"
-            android:gravity="left"
-            android:textColor="#AAADB1"
-            android:layout_gravity="left"
-            android:textSize="15sp"
-            android:paddingLeft="23dp"
-            android:layout_weight="1"
-            android:id="@+id/textView2" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="New Here ? sign up"
-            android:id="@+id/link_signup"
-            android:paddingRight="23dp"
-            android:textSize="15sp"
-            android:textColor="#AAADB1"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:layout_gravity="right" />
     </LinearLayout>
 
 </LinearLayout>

@@ -81,6 +81,12 @@
         sending the fetched token to the server or subscribing to the PubSub topic. Please try
         running the sample again.</string>
 	<string name="push_title">Push</string>
+	<string name="Username">Username</string>
+	<string name="Password">Password</string>
+	<string name="LoginBtn">Login</string>
+	<string name="SignupBtn">Sign Up</string>
+	<string name="LogoutBtn">Log Out</string>
+	<string name="Welcome">Welcome!</string>
 	<string name="send_title">Send</string>
 	<string name="enter_push_receiver">Enter push receiver</string>
 	<string name="push_receivers">Push notification receivers:</string>

@@ -5,93 +5,106 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.oovoo.sdk.oovoosdksampleshow.R;
-import com.twitter.sdk.android.core.Callback;
-import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.TwitterException;
-import com.twitter.sdk.android.core.TwitterSession;
-import com.twitter.sdk.android.core.identity.TwitterLoginButton;
-import com.twitter.sdk.android.tweetcomposer.TweetComposer;
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 
 public class login extends AppCompatActivity {
-    private TwitterLoginButton twitterButton;
+    // Declare Variables
+    Button loginbutton;
+    Button signup;
+    String usernametxt;
+    String passwordtxt;
+    EditText password;
+    EditText username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setUpViews();
-        //facebook sdk
-//finding login view
-        Button button = (Button) findViewById(R.id.btn_login);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(login.this, MainActivity.class);
-                startActivity(i);
+        // Locate EditTexts in main.xml
+        username = (EditText) findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
+
+        // Locate Buttons in main.xml
+        loginbutton = (Button) findViewById(R.id.login);
+        signup = (Button) findViewById(R.id.signup);
+
+        // Login Button Click Listener
+        loginbutton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                // Retrieve the text entered from the EditText
+                usernametxt = username.getText().toString();
+                passwordtxt = password.getText().toString();
+
+                // Send data to Parse.com for verification
+                ParseUser.logInInBackground(usernametxt, passwordtxt,
+                        new LogInCallback() {
+                            public void done(ParseUser user, ParseException e) {
+                                if (user != null) {
+                                    // If user exist and authenticated, send user to Welcome.class
+                                    Intent intent = new Intent(
+                                            login.this,
+                                            MainActivity.class);
+                                    startActivity(intent);
+                                    Toast.makeText(getApplicationContext(),
+                                            "Successfully Logged in",
+                                            Toast.LENGTH_LONG).show();
+                                    finish();
+                                } else {
+                                    Toast.makeText(
+                                            getApplicationContext(),
+                                            "No such user exist, please signup",
+                                            Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
             }
         });
-        TextView textView = (TextView) findViewById(R.id.link_signup);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent j = new Intent(login.this, signup.class);
-                startActivity(j);
+        // Sign up Button Click Listener
+        signup.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                // Retrieve the text entered from the EditText
+                usernametxt = username.getText().toString();
+                passwordtxt = password.getText().toString();
+
+                // Force user to fill up the form
+                if (usernametxt.equals("") || passwordtxt.equals("")) {
+                    Toast.makeText(getApplicationContext(),
+                            "Please complete the sign up form",
+                            Toast.LENGTH_SHORT).show();
+
+                } else {
+                    // Save new user data into Parse.com Data Storage
+                    ParseUser user = new ParseUser();
+                    user.setUsername(usernametxt);
+                    user.setPassword(passwordtxt);
+                    user.signUpInBackground(new SignUpCallback() {
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                // Show a simple Toast message upon successful registration
+                                Toast.makeText(getApplicationContext(),
+                                        "Successfully Signed up, please log in.",
+                                        Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(),
+                                        "Sign up Error", Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        }
+                    });
+                }
+
             }
         });
-    }
 
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        twitterButton.onActivityResult(requestCode, resultCode, data);
-    }
-
-    private void setUpViews() {
-        setUpTwitterButton();
-    }
-
-    private void setUpTwitterButton() {
-        twitterButton = (TwitterLoginButton) findViewById(R.id.twitter_button);
-        twitterButton.setCallback(new Callback<TwitterSession>() {
-            @Override
-            public void success(Result<TwitterSession> result) {
-                Toast.makeText(getApplicationContext(),
-                        getResources().getString(R.string.app_name),
-                        Toast.LENGTH_SHORT).show();
-
-                setUpViewsForTweetComposer();
-            }
-
-            @Override
-            public void failure(TwitterException exception) {
-                Toast.makeText(getApplicationContext(),
-                        getResources().getString(R.string.app_name),
-                        Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(login.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
-    }
-
-    private void setUpViewsForTweetComposer() {
-        TweetComposer.Builder builder = new TweetComposer.Builder(this)
-                .text("Just setting up my Fabric!");
-        builder.show();
     }
 }

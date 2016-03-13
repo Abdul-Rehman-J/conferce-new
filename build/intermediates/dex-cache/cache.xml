@@ -1,3 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-7.5.0_4e368a668076c1a82f7498bd40cb7123899fccf9.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_68bbf86fa8689c41b55c24696b40c0251f0d2b5e.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_8df36ddddb53a0a35429ef8ab7ee7901cf262610.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-7.5.0_6dabc684c65349f5e2a9e8df8cc76c480e306f4f.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_fa9e0030109b980401ead142302e5a511d985298.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_000dc0ca999935e49725e415af095992e81fd61c.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_ea7dbc3336d79ecae580f1e037d7e30bee773653.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\libs\oovoosdk.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2ac73965a190571ddecb25b7a9a9320d1d12deca">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\oovoosdk_07e9270d63087de7c62968cd89c97ae5c1c0a87d.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_21e5e7f9ccd6ce3488bcc774e2bedd0d71d60dc6.jar" />
+    </item>
+    <item
+        jar="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\libs\Parse-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0134925989cd90163c416e94383b1b8ee88d02e2">
+        <dex dex="C:\Users\aspire\Downloads\Compressed\conferce-new-ashir\app\build\intermediates\pre-dexed\debug\Parse-1.3.0_5fd4e900c18383aeebbd17fa3f14e8abcb9a8b32.jar" />
+    </item>
+
+</items>

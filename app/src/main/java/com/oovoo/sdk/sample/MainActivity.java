@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import com.oovoo.sdk.oovoosdksampleshow.R;
 import com.oovoo.sdk.sample.ui.SampleActivity;
+import com.parse.ParseUser;
 
 public class MainActivity extends AppCompatActivity{
     DrawerLayout mDrawerLayout;
@@ -55,25 +56,30 @@ public class MainActivity extends AppCompatActivity{
                 mDrawerLayout.closeDrawers();
 
 
-              /*  if (menuItem.getItemId() == R.id.nav_item_sent) {
-                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.containerView, new SentFragment()).commit();
-
-                }*/
-                if (menuItem.getItemId() == R.id.nav_item_sent) {
-                   Intent i=new Intent(MainActivity.this,SampleActivity.class);
-                    startActivity(i);
-
-                }
                 if (menuItem.getItemId() == R.id.nav_item_inbox) {
-                    FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
-                    xfragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
-                }
-
-                return false;
+                            ParseUser.logOut();
+                            finish();
             }
 
-        });
+            if(menuItem.getItemId()==R.id.nav_item_sent)
+
+            {
+                Intent i = new Intent(MainActivity.this, SampleActivity.class);
+                startActivity(i);
+
+            }
+
+            if(menuItem.getItemId()==R.id.nav_item_inbox)
+
+            {
+                FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
+                xfragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
+            }
+
+            return false;
+        }
+
+    });
 
         /**
          * Setup Drawer Toggle of the Toolbar
